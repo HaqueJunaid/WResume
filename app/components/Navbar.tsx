@@ -8,7 +8,8 @@ const Navbar = () => {
             <p className='text-2xl font-bold text-gradient'>WResume</p>
         </Link>
         <Link to={"/upload"} className='primary-button w-fit'>
-            Upload Resume
+            <span className='sm:block md:hidden'>Upload</span>
+            <span className='hidden md:block'>Upload Resume</span>
         </Link>
     </nav>
   )

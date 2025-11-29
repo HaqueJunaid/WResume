@@ -20,7 +20,7 @@ const ResumeCard = ({ resume: { id, companyName, jobTitle, feedback, imagePath }
     return (
         <Link to={`/resume/${id}`} className='resume-card animate-in ease-in-out fade-in duration-1000'>
             <div className='resume-card-header'>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col md:flex-col gap-2">
                     {companyName && <h2 className='!text-black font-bold break-words'>{companyName} </h2>}
                     {jobTitle && <h3 className='text-lg break-words text-gray-500'>{jobTitle}</h3>}
                     {!companyName && !jobTitle && <h2 className='!text-black font-bold'>Resume</h2>}
@@ -31,7 +31,7 @@ const ResumeCard = ({ resume: { id, companyName, jobTitle, feedback, imagePath }
             </div>
             {resumeUrl && (<div className='gradient-border animate-in fade-in duration-1000'>
                 <div className="w-full h-full">
-                    <img src={resumeUrl} alt="resume" className='w-full h-[350px] max-sm:-h-[200px] object-cover object-top rounded-xl' />
+                    <img src={resumeUrl} alt="resume" className='w-full max-h-[360px] max-sm:-h-[200px] object-cover object-top rounded-xl' />
                 </div>
             </div>)}
         </Link>
